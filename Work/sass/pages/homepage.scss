@@ -1,0 +1,23 @@
+#homepage {
+	background: $primary_color;
+	font-family: $font;
+	p {
+		color: pink;
+		span {
+			color: red;
+		}
+	}
+	form {
+		input{
+		&:nth-child(2n) {
+			background: red;
+			@include form-input(100px, red);
+		}
+
+		&[type="submit"] {
+			@include form-submit();
+		}
+	}
+	}
+}
+
